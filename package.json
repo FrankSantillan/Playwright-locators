@@ -4,7 +4,7 @@
   "description": "Automate \"https://the-internet.hackerearth.com/\" with Playwright + TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hooks.ts src/features --format json:test-results/allure-results/results.json",
+    "test": "npx cucumber-js",
     "allure:generate": "allure generate test-results/allure-results --clean -o test-results/allure-report",
     "allure:open": "allure open test-results/allure-report",
 
