@@ -8,8 +8,7 @@ import * as path from "node:path";
 
 
 Before(async function (this: CustomWorld) {
-    const isCI = process.env.CI === 'true';
-    this.browser = await chromium.launch({ headless: isCI || config.headless });
+    this.browser = await chromium.launch({ headless: config.isCi || config.headless });
     this.context = await this.browser.newContext();
 
     // Start tracing Playwright
