@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cucumber-js --format progress",
-    "allure:generate": "allure generate test-results/allure-results --clean -o test-results/allure-report",
-    "allure:open": "allure open test-results/allure-report",
+    "allure:generate": "npx allure generate test-results/allure-results --clean -o test-results/allure-report",
+    "allure:open": "npx allure open test-results/allure-report",
 
     "show:trace": "npx playwright show-trace test-results/traces/{my-scenario-change-the-name}.zip",
     "show:trace:test": "npx playwright show-trace test-results/traces/VerifyABTestingPageLoads_2025-07-23T02-58-52-630Z.zip"
