@@ -17,7 +17,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Install dependencies
         run: npm install
@@ -32,3 +35,9 @@ jobs:
         run: |
           npm run allure:generate
           npm run allure:open
+
+      - name: Upload Allure Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: test-results/allure-report
