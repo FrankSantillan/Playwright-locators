@@ -1,0 +1,28 @@
+{
+  "name": "playwright-locators",
+  "version": "1.0.0",
+  "description": "Automate \"https://the-internet.hackerearth.com/\" with Playwright + TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/hooks.ts src/features --format json:test-results/allure-results/results.json",
+    "allure:generate": "allure generate test-results/allure-results --clean -o test-results/allure-report",
+    "allure:open": "allure open test-results/allure-report",
+
+    "show:trace": "npx playwright show-trace test-results/traces/{my-scenario-change-the-name}.zip",
+    "show:trace:test": "npx playwright show-trace test-results/traces/VerifyABTestingPageLoads_2025-07-23T02-58-52-630Z.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@cucumber/messages": "^28.1.0",
+    "@playwright/test": "^1.54.1",
+    "allure-cucumberjs": "^3.3.2",
+    "allure-playwright": "^3.3.2",
+    "dotenv": "^17.2.0",
+    "playwright": "^1.54.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
