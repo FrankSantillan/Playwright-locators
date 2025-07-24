@@ -1,0 +1,11 @@
+#Webstorm .idea files
+/.idea
+
+#Node Modules dependencies
+/node_modules
+
+#Testing Results
+/test-results
+
+#Environment Variables
+.env
