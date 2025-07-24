@@ -31,6 +31,12 @@ jobs:
       - name: Run tests
         run: npm run test
 
+      - name: ☕️ Setup Java for Allure
+        uses: actions/setup-java@v4
+        with:
+            distribution: 'temurin' # or 'zulu'
+            java-version: '17'
+
       - name: Generate Allure Report
         run: |
           npm run allure:generate
