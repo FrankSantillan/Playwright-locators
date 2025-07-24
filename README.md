@@ -41,6 +41,10 @@ npx tsc --init
 npm install dotenv --save
 npm install --save-dev @cucumber/cucumber ts-node
 npm install --save-dev @cucumber/cucumber @cucumber/messages allure-cucumberjs
+npm install --save-dev allure-commandline
+npm install --save-dev playwright @cucumber/cucumber ts-node typescript allure-cucumberjs@3.3.2
+
+
 
 ```
 
