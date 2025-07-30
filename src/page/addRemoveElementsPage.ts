@@ -1,10 +1,11 @@
 import { Page } from '@playwright/test';
+import {config} from "../config/test.config";
 
 export class AddRemoveElementsPage {
     constructor(private page: Page) {}
 
     async navigate() {
-        await this.page.goto('https://the-internet.hackerearth.com/');
+        await this.page.goto(config.baseURL, { timeout: config.timeout });
         await this.page.click('text=Add/Remove Elements');
     }
 
