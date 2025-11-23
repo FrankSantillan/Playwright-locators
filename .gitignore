@@ -9,3 +9,6 @@
 
 #Environment Variables
 .env
+
+#rerun logger file
+@rerun.txt

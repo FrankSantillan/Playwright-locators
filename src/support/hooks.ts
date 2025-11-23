@@ -6,7 +6,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 
 
-
+// @ts-check
 Before(async function (this: CustomWorld) {
     this.browser = await chromium.launch({ headless: config.isCi || config.headless });
     this.context = await this.browser.newContext();
