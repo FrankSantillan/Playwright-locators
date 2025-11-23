@@ -1,0 +1,51 @@
+{
+  "default": {
+    "requireModule": ["ts-node/register"],
+    "require": [
+      "src/steps/**/*.ts",
+      "src/support/hooks.ts",
+      "src/hooks/hook.ts"
+    ],
+    "paths": [
+      "src/features/**/*.feature",
+      "src/features/*/*.feature",
+      "src/features/*/*/*.feature"
+    ],
+    "format": [
+      "allure-cucumberjs",
+      "progress",
+      "html:test-results/cucumber-results/cucumber-report.html",
+      "json:test-results/cucumber-results/cucumber-report.json",
+      "rerun:@rerun.txt"
+    ],
+    "formatOptions": {
+      "resultsDir": "test-results/allure-results",
+      "snippetInterface": "async-await"
+    },
+    "parallel": 1,
+    "publishQuiet": true,
+    "dryRun": false,
+    "retry": 0
+  },
+  "rerun": {
+    "requireModule": ["ts-node/register"],
+    "require": [
+      "src/steps/**/*.ts",
+      "src/support/hooks.ts",
+      "src/hooks/hook.ts"
+    ],
+    "format": [
+      "progress",
+      "html:test-results/cucumber-results/cucumber-report.html",
+      "json:test-results/cucumber-results/cucumber-report.json",
+      "rerun:@rerun.txt"
+    ],
+    "formatOptions": {
+      "resultsDir": "test-results/allure-results",
+      "snippetInterface": "async-await"
+    },
+    "parallel": 0,
+    "publishQuiet": true,
+    "dryRun": false
+  }
+}
